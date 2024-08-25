@@ -1,4 +1,4 @@
-import { Link, useRouteError } from "react-router-dom";
+import { useRouteError } from "react-router-dom";
 import { Brand } from "./brand";
 
 interface RouteError {
