@@ -1,9 +1,13 @@
-import { navigationLinks } from "./constants";
-import { Sidebar } from "../sidebar";
 import { useEffect, useState } from "react";
-import { TfiAlignRight } from "react-icons/tfi";
+// import { TfiAlignRight } from "react-icons/tfi";
 import { Brand } from "../../components/brand";
 import { NavigationLink } from "../../components/navigation-link";
+import { Sidebar } from "../sidebar";
+
+import { RiMenuFill } from "react-icons/ri";
+
+import { navigationLinks } from "./constants";
+
 
 export const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -48,7 +52,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="header shadow-[0_-5px_10px_2px_black] h-24 px-10 flex fixed top- left-0 w-full z-20">
+      <header className="header shadow-[0_-5px_10px_2px_black] h-24 px-10 flex fixed top-0 left-0 w-full z-20 bg-white">
         <div className="header-wrapper w-full flex justify-between items-center">
           <Brand />
           <nav data-testid="header-nav" className="hidden lg:flex gap-1 ">
@@ -60,7 +64,7 @@ export const Header = () => {
               />
             ))}
           </nav>
-          <TfiAlignRight
+          <RiMenuFill
             className="cursor-pointer transition duration-200 ease-in-out p-1 lg:hidden"
             color="#06b6d4"
             size="2.5em"
