@@ -31,7 +31,7 @@ function App() {
             </SubHeading>
             <div
               className="
-            font-bold text-black text-xl 
+            font-bold text-white text-xl 
             w-44 h-12 bg-cyan-400 rounded-3xl
             flex justify-center items-center 
             transition 200 ease-in cursor-pointer
