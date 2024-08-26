@@ -56,10 +56,18 @@ export const Footer = () => {
           <Link to="#">Termos</Link>
         </div>
         <div className="flex gap-4">
-          <PiInstagramLogoFill size="1.8rem" />
-          <PiFacebookLogoFill size="1.8rem" />
-          <PiYoutubeLogoFill size="1.8rem" />
-          <PiXLogoFill size="1.8rem" />
+          <Link to="#" title="Instagram" className="bg-cyan-400 p-1 rounded-full">
+            <PiInstagramLogoFill size="1.8rem" color="white"  />
+          </Link>
+          <Link to="#" title="Faceboox" className="bg-cyan-400 p-1 rounded-full">
+            <PiFacebookLogoFill size="1.8rem" color="white"  />
+          </Link>
+          <Link to="#" title="Youtube" className="bg-cyan-400 p-1 rounded-full">
+            <PiYoutubeLogoFill size="1.8rem" color="white"  />
+          </Link>
+          <Link to="#" title="X" className="bg-cyan-400 p-1 rounded-full">
+            <PiXLogoFill size="1.8rem" color="white"  />
+          </Link>
         </div>
       </div>
     </footer>

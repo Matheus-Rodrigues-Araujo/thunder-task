@@ -1,15 +1,16 @@
-import { Link } from "react-router-dom";
+import "./styles.css";
 import { FaCheck } from "react-icons/fa6";
 
 import { Plan } from "../../constants/plans";
 import { ContentSubHeading } from "../content-sub-heading";
 import { ContentText } from "../content-text";
+import { LinkButton } from "../link-button";
 
 export const PlanCard = ({ name, description, price, features }: Plan) => {
   return (
     <div
       className={`
-      price-card flex flex-col place-content-center
+      plan-card flex flex-col place-content-center
       gap-3 w-[350px] h-[420px] p-5 bg-white
       shadow-[-1px_-1px_13px_gray] rounded-t-lg 
       transition 200 ease-in hover:scale-105
@@ -29,16 +30,7 @@ export const PlanCard = ({ name, description, price, features }: Plan) => {
           </li>
         ))}
       </ul>
-      <div
-        className="
-            font-bold text-white text-xl 
-            w-full h-12 bg-cyan-400 rounded-3xl
-            flex justify-center items-center
-            transition 200 ease-in cursor-pointer
-            hover:bg-cyan-500 hover:text-white"
-      >
-        <Link to="#">Assinar plano</Link>
-      </div>
+      <LinkButton route="#">Assinar plano</LinkButton>
     </div>
   );
 };

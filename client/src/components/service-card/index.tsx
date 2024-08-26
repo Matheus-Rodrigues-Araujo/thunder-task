@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
 import "./styles.css";
 
 import { Service } from "../../constants/services";
 import { ContentSubHeading } from "../content-sub-heading";
 import { ContentText } from "../content-text";
+import { LinkButton } from "../link-button";
 
 export const ServiceCard = ({ name, icon, subtitle, description }: Service) => {
   return (
@@ -18,16 +18,7 @@ export const ServiceCard = ({ name, icon, subtitle, description }: Service) => {
       <div className="service-wrapper flex bg-white py-5 gap-2 flex-col justify-around items-center">
         <ContentSubHeading>{name}</ContentSubHeading>
         <ContentText>{subtitle}</ContentText>
-        <div
-          className="
-            font-bold text-white text-xl 
-            w-44 h-12 bg-cyan-400 rounded-3xl
-            flex justify-center items-center 
-            transition 200 ease-in cursor-pointer
-            hover:bg-cyan-500 hover:text-white"
-        >
-          <Link to="#">Ler mais</Link>
-        </div>
+        <LinkButton route="#">Saiba mais</LinkButton>
       </div>
       <div className="hidden">{description}</div>
     </div>
