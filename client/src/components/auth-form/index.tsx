@@ -24,7 +24,7 @@ export const AuthForm = ({ type }: { type: string }) => {
   const onSubmit = handleSubmit((data) => console.log(data));
 
   return (
-    <section className="auth-section flex min-h-screen w-full justify-center items-center">
+    <section className="bg-white auth-section flex min-h-screen w-full justify-center items-center">
       <div className="m-5 auth-body grid w-full max-w-md">
         <header className="auth-header flex flex-col">
           <HeroHeading>

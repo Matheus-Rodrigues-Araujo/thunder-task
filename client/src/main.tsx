@@ -4,7 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.tsx";
-import Auth from "./pages/Auth.tsx";
+import Auth from "./pages/auth/index.tsx";
 
 import { AuthForm } from "./components/auth-form/index.tsx";
 import Error from "./components/Error.tsx";
