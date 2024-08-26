@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --cyan: #22d3ee;
+  --gray: #4b5563;
+}
+
 * {
   margin: 0;
   padding: 0;

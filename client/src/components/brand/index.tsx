@@ -6,7 +6,7 @@ export const Brand = () => {
     <Link
       to="/"
       title="Logo"
-      className="text-cyan-500 flex items-center transition duration-200 ease-in text-3xl font-bold"
+      className="brand text-cyan-500 flex items-center transition duration-200 ease-in text-3xl font-bold"
     >
       Thunder
       <AiFillThunderbolt

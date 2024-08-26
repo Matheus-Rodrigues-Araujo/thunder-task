@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import App from "./App.tsx";
 import Auth from "./pages/Auth.tsx";
 
-import AuthForm from "./components/AuthForm.tsx";
+import { AuthForm } from "./components/auth-form/index.tsx";
 import Error from "./components/Error.tsx";
 
 const router = createBrowserRouter([
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "auth",
+    path: "/",
     element: <Auth />,
     children: [
       {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
         element: <AuthForm type="sign-up" />,
       },
     ],
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

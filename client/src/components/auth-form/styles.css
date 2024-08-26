@@ -1,0 +1,22 @@
+.auth-header .sub-heading {
+  color: black;
+}
+
+.auth-form label,
+.auth-form input {
+  color: var(--gray);
+}
+
+.auth-form .content-text,
+.auth-footer .content-text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.auth-form .content-text {
+  color: #d11515;
+}
+
+.auth-form input {
+  outline: 1px solid var(--gray);
+}
