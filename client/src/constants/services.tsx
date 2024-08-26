@@ -14,7 +14,7 @@ export interface Service {
 export const services: Service[] = [
   {
     id: 1,
-    name: "Gerenciamento de Tarefas e Projetos",
+    name: "Gerenciamento de projetos",
     icon: <FaFlag size="10rem" color="white" />,
     subtitle: "Organize e Planeje seus objetivos",
     description:

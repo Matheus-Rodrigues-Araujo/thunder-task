@@ -18,7 +18,7 @@ export const NavigationLink = ({
         name === "Sign Up"
           ? "bg-cyan-500 hover:bg-cyan-600 text-white rounded-[3rem]"
           : "text-gray-600"
-      } px-4 py-2 text-xl font-bold transition duration-200 ease-in`}
+      } px-2 py-2 text-xl font-bold transition duration-200 ease-in`}
     >
       {name}
       {name !== "Sign Up" && <div className="bg-cyan-500"></div>}

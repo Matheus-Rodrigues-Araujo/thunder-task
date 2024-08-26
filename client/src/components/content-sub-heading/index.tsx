@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
 export const ContentSubHeading = ({ children }: { children: ReactNode }) => {
-  return <h4 className="text-black font-bold text-lg text-center">{children}</h4>;
+  return (
+    <h4 className="text-left text-white text-md font-bold">{children}</h4>
+  );
 };

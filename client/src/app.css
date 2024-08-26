@@ -1,6 +1,23 @@
-.services-section > p{
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #22d3ee;
+.services-section p, .plans-section p {
+  font-size: 1rem;
+  letter-spacing: -0.1px;
+}
+
+.services-section > p, .plans-section > p {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: auto;
+  color: #22d3ee;
+}
+
+.plans-section h4{
+  color: black;
+}
+
+
+@media screen and (max-width: 728px) {
+  .services-section > p, .plans-section > p {
+    line-height: 40px;
+  }
 }

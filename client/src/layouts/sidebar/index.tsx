@@ -15,7 +15,7 @@ export const Sidebar = ({ navigationLinks, isSidebarOpen }: SidebarProps) => {
         data-testid="sidebar"
         className={`sidebar flex flex-col ${
           !isSidebarOpen ? "-translate-x-full" : "translate-x-0"
-        } transition-transform duration-200 ease-in-out w-[255px] fixed top-0 left-0 items-center min-h-screen z-20 pt-2 bg-white lg:hidden`}
+        } transition-transform duration-200 ease-in-out w-[270px] fixed top-0 left-0 items-center min-h-screen z-20 pt-2 bg-white lg:hidden`}
       >
         <div className="flex flex-col gap-6 mt-5 flex-grow">
           <Brand />
