@@ -32,7 +32,7 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    variant: "secondary",
+    variant: "primary",
   },
   render: (args) => {
     return <Brand {...args} />;
