@@ -9,7 +9,7 @@ const Auth = () => {
       <Outlet />
       <div className="auth-bg hidden lg:flex flex-col justify-center items-center">
         <div className="max-w-xl grid place-items-center">
-          <Brand />
+          <Brand variant='secondary' />
           <ContentText>Domine suas tarefas com o poder do trovão!</ContentText>
         </div>
       </div>
