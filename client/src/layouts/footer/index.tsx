@@ -17,7 +17,7 @@ export const Footer = () => {
     <footer className="footer flex flex-col items-center gap-3 py-10 bg-white border-t-2 px-10 md:items-stretch">
       <div className="footer-wrapper w-[230px] gap-3 flex flex-col flex-wrap md:w-full  md:flex-row md:justify-between md:items-start">
         <div className="flex flex-col items-start text-center gap-3">
-          <Brand />
+          <Brand variant="primary" />
           <ContentText>
             Junte-se a milhões de pessoas que <br /> organizam trabalho e vida
             pessoal

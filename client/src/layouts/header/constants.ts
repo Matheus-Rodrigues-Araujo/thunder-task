@@ -6,19 +6,16 @@ export interface NavigationLinksProps {
 export const navigationLinks: NavigationLinksProps[] = [
   {
     name: "Home",
-    route: "#home",
-  },
-  {
-    name: "About",
-    route: "#about",
+    route: "/",
+    
   },
   {
     name: "Services",
     route: "#services",
   },
   {
-    name: "Contact",
-    route: "/contact",
+    name: "Plans",
+    route: "#plans",
   },
   {
     name: "Sign In",

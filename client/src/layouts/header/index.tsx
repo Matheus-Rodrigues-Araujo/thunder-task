@@ -1,17 +1,31 @@
-import { useEffect, useState } from "react";
-// import { TfiAlignRight } from "react-icons/tfi";
+import { RefObject, useEffect, useState } from "react";
+
 import { Brand } from "../../components/brand";
-import { NavigationLink } from "../../components/navigation-link";
 import { Sidebar } from "../sidebar";
+
+import {
+  NavigationLink,
+  NavigationLinkProps,
+} from "../../components/navigation-link";
 
 import { RiMenuFill } from "react-icons/ri";
 
 import { navigationLinks } from "./constants";
 
+export interface HeaderProps {
+  scrollToRef: (ref: RefObject<Element>) => void;
+  heroRef: RefObject<Element>;
+  servicesRef: RefObject<Element>;
+  plansRef: RefObject<Element>;
+}
 
-export const Header = () => {
+export const Header = ({
+  scrollToRef,
+  heroRef,
+  servicesRef,
+  plansRef,
+}: HeaderProps) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const handleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -20,6 +34,29 @@ export const Header = () => {
     if (!(e.target instanceof Element)) return;
     if (e.target.closest(".overlay")) {
       setIsSidebarOpen(false);
+    }
+  };
+
+  const handleScrollNavigation = (link: NavigationLinkProps) => {
+    if (!link.name.startsWith("Sign")) {
+      return (
+        <NavigationLink
+          key={link.name}
+          route={link.route}
+          name={link.name}
+          scrollTo={() => {
+            link.name === "Home"
+              ? scrollToRef(heroRef)
+              : link.name === "Services"
+                ? scrollToRef(servicesRef)
+                : link.name === "Plans" && scrollToRef(plansRef);
+          }}
+        />
+      );
+    } else {
+      return (
+        <NavigationLink key={link.name} route={link.route} name={link.name} />
+      );
     }
   };
 
@@ -56,13 +93,7 @@ export const Header = () => {
         <div className="header-wrapper w-full flex justify-between items-center">
           <Brand variant="primary" />
           <nav data-testid="header-nav" className="hidden lg:flex gap-1 ">
-            {navigationLinks.map((link) => (
-              <NavigationLink
-                key={link.name}
-                route={link.route}
-                name={link.name}
-              />
-            ))}
+            {navigationLinks.map((link) => handleScrollNavigation(link))}
           </nav>
           <RiMenuFill
             className="cursor-pointer transition duration-200 ease-in-out p-1 lg:hidden"

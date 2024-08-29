@@ -1,3 +1,4 @@
+import { RefObject, useRef } from "react";
 import "./app.css";
 import { Footer } from "./layouts/footer";
 import { Header } from "./layouts/header";
@@ -14,11 +15,27 @@ import { services } from "./constants/services";
 import { plans } from "./constants/plans";
 
 function App() {
+  const heroRef = useRef(null);
+  const servicesRef = useRef(null);
+  const plansRef = useRef(null);
+
+  const scrollToRef = (ref: RefObject<Element>) => {
+    ref.current && ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-      <Header />
+      <Header
+        scrollToRef={scrollToRef}
+        heroRef={heroRef}
+        servicesRef={servicesRef}
+        plansRef={plansRef}
+      />
       <main className="mt-28 p-10 lg:mt-0">
-        <section className="md:min-h-screen flex flex-col items-center gap-3 lg:flex-row">
+        <section
+          ref={heroRef}
+          className="md:min-h-screen flex flex-col items-center gap-3 lg:flex-row"
+        >
           <div className="flex flex-col gap-3">
             <HeroHeading>
               Gerenciamento facilitado com o{" "}
@@ -39,7 +56,10 @@ function App() {
           </div>
         </section>
         <div className="w-full h-1 bg-cyan-400 my-5"></div>
-        <section className="services-section min-h-screen flex flex-col justify-center gap-10">
+        <section
+          ref={servicesRef}
+          className="services-section min-h-screen flex flex-col justify-center gap-10"
+        >
           <ContentHeading>Serviços que entregamos</ContentHeading>
           <ContentText>Nossos serviços e integrações</ContentText>
           <div className="flex flex-wrap gap-10 justify-center">
@@ -55,7 +75,10 @@ function App() {
           </div>
         </section>
         <div className="w-full h-1 bg-cyan-400 my-5"></div>
-        <section className="plans-section min-h-screen flex flex-col justify-center gap-10">
+        <section
+          ref={plansRef}
+          className="plans-section min-h-screen flex flex-col justify-center gap-10"
+        >
           <ContentHeading>Nossos planos</ContentHeading>
           <ContentText>Analise os benefícios</ContentText>
           <div className="flex flex-wrap gap-10 justify-center">
