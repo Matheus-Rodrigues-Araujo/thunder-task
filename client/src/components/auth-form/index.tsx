@@ -28,7 +28,7 @@ export const AuthForm = ({ type }: { type: string }) => {
       <div className="m-5 auth-body grid w-full max-w-md">
         <header className="auth-header flex flex-col">
           <HeroHeading>
-            <Brand />
+            <Brand variant="primary" />
           </HeroHeading>
           <SubHeading>{type === "sign-in" ? "Sign in" : "Sign up"}</SubHeading>
         </header>
