@@ -17,7 +17,7 @@ const Error = () => {
         </p>
         <p className="flex items-center gap-1 text-white font-medium text-2xl mb-1">
           return to
-          <Brand />
+          <Brand variant="primary" />
         </p>
       </div>
     </div>

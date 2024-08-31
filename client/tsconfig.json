@@ -13,10 +13,11 @@
     "allowImportingTsExtensions": true,
     "jsx": "react-jsx",
     "incremental": true,
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "./vitest.config.ts"],
   "exclude": ["node_modules"]
 }

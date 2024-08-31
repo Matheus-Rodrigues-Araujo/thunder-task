@@ -3,6 +3,7 @@ import App from "../App";
 import { AuthForm } from "../components/auth-form";
 import Auth from "../views/auth";
 import Error from "../components/Error";
+import Dashboard from "../views/dashboard";
 
 const routes = createBrowserRouter([
   {
@@ -21,6 +22,20 @@ const routes = createBrowserRouter([
       {
         path: "sign-up",
         element: <AuthForm type="sign-up" />,
+      },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "teams",
+        element: <h1 className="text-black 4xl">Teams</h1>,
+      },
+      {
+        path: "profile",
+        element: <h1 className="text-black 4xl"> Profile</h1>,
       },
     ],
   },
