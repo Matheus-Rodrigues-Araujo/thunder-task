@@ -3,7 +3,7 @@ import "./styles.css";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { authFormSchema } from "../utils/auth-form-schema";
+import { authFormSchema } from "../../utils/auth-form-schema";
 
 import { SubHeading } from "../sub-heading";
 import { ContentText } from "../content-text";

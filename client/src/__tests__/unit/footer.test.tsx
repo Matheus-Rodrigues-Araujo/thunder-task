@@ -1,16 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { Footer } from "../../layouts/footer";
 import { MemoryRouter } from "react-router-dom";
+import { expectText, expectTitle } from "../../utils/testingUtils";
 
 const FooterComponent = () => (
   <MemoryRouter>
     <Footer />
   </MemoryRouter>
 );
-
-const expectText = (match: RegExp | string) => {
-  expect(screen.getByText(match)).toBeInTheDocument();
-};
 
 describe("Foote Component", () => {
   beforeEach(() => render(<FooterComponent />));
@@ -59,7 +56,7 @@ describe("Foote Component", () => {
     const socialMediaTitles = ["Instagram", "Facebook", "Youtube"];
 
     socialMediaTitles.forEach((title: string) => {
-      expect(screen.getByTitle(title)).toBeInTheDocument();
+      expectTitle(title);
     });
   });
 });
