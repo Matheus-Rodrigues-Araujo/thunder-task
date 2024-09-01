@@ -56,13 +56,13 @@ export const Footer = () => {
         </div>
         <div className="flex gap-4">
           <Link to="#" title="Instagram" className="bg-cyan-400 p-1 rounded-full">
-            <PiInstagramLogoFill size="1.8rem" color="white"  />
+            <PiInstagramLogoFill size="1.5rem" color="white"  />
           </Link>
           <Link to="#" title="Facebook" className="bg-cyan-400 p-1 rounded-full">
-            <PiFacebookLogoFill size="1.8rem" color="white"  />
+            <PiFacebookLogoFill size="1.5rem" color="white"  />
           </Link>
           <Link to="#" title="Youtube" className="bg-cyan-400 p-1 rounded-full">
-            <PiYoutubeLogoFill size="1.8rem" color="white"  />
+            <PiYoutubeLogoFill size="1.5em" color="white"  />
           </Link>
         </div>
       </div>
