@@ -7,10 +7,10 @@ import {
 import { ContentText } from "../content-text";
 
 interface FormInputProps {
-  label: string;
+  label?: string;
   type: string;
   placeholder: string;
-  register: UseFormRegisterReturn;
+  register?: UseFormRegisterReturn;
   error?: FieldError | FieldErrorsImpl<FieldValues>;
 }
 
