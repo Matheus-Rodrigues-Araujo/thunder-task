@@ -19,7 +19,7 @@ const Dashboard = () => {
               <FormInput type="text" placeholder="Search workspace" />
             </div>
             <div
-              className="grid grid-cols-3 my-3 gap-3 max-h-[calc(70vh-45px)] overflow-y-scroll"
+              className="grid lg:grid-cols-2 2xl:grid-cols-3 my-3 gap-3 max-h-[calc(70vh-45px)] overflow-y-scroll"
               style={{ scrollbarWidth: "none" }}
             >
               <WorkSpaceCard

@@ -6,9 +6,9 @@ import "./styles.css";
 
 const DynamicPanel = () => {
   return (
-    <div className="ds-panel h-44 w-full bg-gradient-to-r to-blue-800 via-cyan-600 from-cyan-400 flex items-center justify-between px-5">
+    <div className="ds-panel h-44 w-full bg-secondary-gradient flex items-center justify-between px-5">
       <div className="flex flex-col justify-center">
-        <h2 className="text-4xl text-white font-bold">Bem vindo, André!</h2>
+        <h2 className="text-4xl text-secondary-white font-bold">Bem vindo, André!</h2>
         <TextContent>
           Comece a gerenciar seus trabalhos individuais ou de sua equipe.
         </TextContent>

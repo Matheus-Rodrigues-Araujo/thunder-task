@@ -8,14 +8,12 @@ import { LinkButton } from "../link-button";
 export const ServiceCard = ({ name, icon, subtitle, description }: Service) => {
   return (
     <div
-      className="
-    service-card w-[350px] h-[480px] shadow-[-1px_-1px_13px_gray]
-    rounded-t-lg transition 200 ease-in hover:scale-105"
+      className="service-card card"
     >
-      <div className="flex bg-cyan-400 justify-center items-center h-[60%] rounded-t-lg">
+      <div className="bg-primary-cyan center h-[60%] rounded-t-lg">
         {icon}
       </div>
-      <div className="service-wrapper flex bg-white py-5 gap-2 flex-col justify-around items-center">
+      <div className="service-wrapper flex bg-secondary-white py-5 gap-2 flex-col justify-around items-center">
         <ContentSubHeading>{name}</ContentSubHeading>
         <TextContent>{subtitle}</TextContent>
         <LinkButton route="#">Saiba mais</LinkButton>

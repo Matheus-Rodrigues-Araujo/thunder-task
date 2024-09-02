@@ -7,8 +7,8 @@ type BrandProps = {
 
 export const Brand = ({ variant = "primary" }: BrandProps) => {
   const variantStyles: Record<BrandProps["variant"], string> = {
-    primary: "text-cyan-400 bg-white",
-    secondary: "text-white bg-cyan-400",
+    primary: "text-primary-cyan bg-secondary-white",
+    secondary: "text-secondary-white bg-primary-cyan",
   };
 
   return (

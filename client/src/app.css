@@ -10,7 +10,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: auto;
-  color: #22d3ee;
+  @apply text-primary-cyan
 }
 
 .plans-section h4 {

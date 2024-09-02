@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
   --cyan: #22d3ee;
   --gray: #4b5563;
 }
@@ -19,4 +19,18 @@ html {
 
 body {
   font-family: "Source Code Pro", monospace;
+}
+
+@layer utilities {
+  .center {
+    @apply flex justify-center items-center;
+  }
+
+  .nav-link-sign-btn {
+    @apply w-28 h-10;
+  }
+
+  .footer-link {
+    @apply text-base text-secondary-mediumGray;
+  }
 }

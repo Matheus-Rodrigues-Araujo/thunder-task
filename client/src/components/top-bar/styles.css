@@ -7,5 +7,5 @@
 }
 
 .profile-img {
-  @apply h-8 w-8 rounded-full bg-gray-400 bg-cover bg-center;
+  @apply h-8 w-8 rounded-full bg-primary-cyan bg-cover bg-center;
 }

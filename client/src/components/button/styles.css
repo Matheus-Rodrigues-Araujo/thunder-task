@@ -1,5 +1,5 @@
 .btn {
   @apply flex items-center justify-center w-72 h-12 gap-3
-bg-cyan-400 text-white rounded-3xl transition 
-  duration-200 ease-in cursor-pointer hover:bg-cyan-500;
+ text-white rounded-3xl transition 
+  duration-200 ease-in cursor-pointer ;
 }

@@ -24,7 +24,7 @@ export const AuthForm = ({ type }: { type: string }) => {
   const onSubmit = handleSubmit((data) => console.log(data));
 
   return (
-    <section className="bg-white auth-section flex min-h-screen w-full justify-center items-center">
+    <section className="bg-secondary-white auth-section flex min-h-screen w-full justify-center items-center">
       <div className="m-5 auth-body grid w-full max-w-md">
         <header className="auth-header flex flex-col">
           <Heading>
@@ -99,15 +99,15 @@ export const AuthForm = ({ type }: { type: string }) => {
           </SubmitButton>
         </form>
         <div className="flex items-center w-full gap-3">
-          <div className="h-1 w-full bg-cyan-400" />
+          <div className="h-1 w-full bg-primary-cyan" />
           <span>or</span>
-          <div className="h-1 w-full bg-cyan-400" />
+          <div className="h-1 w-full bg-primary-cyan" />
         </div>
         <footer className="auth-footer flex justify-center text-center">
           {type === "sign-in" ? (
             <TextContent>
               Ainda não tem conta?
-              <Link to="/sign-up" className="text-cyan-400 font-bold">
+              <Link to="/sign-up" className="text-primary-cyan font-bold">
                 {" "}
                 Registrar
               </Link>
@@ -116,7 +116,7 @@ export const AuthForm = ({ type }: { type: string }) => {
             <TextContent>
               {" "}
               Já possui uma conta?
-              <Link to="/sign-in" className="text-cyan-400 font-bold">
+              <Link to="/sign-in" className="text-primary-cyan font-bold">
                 {" "}
                 Entrar
               </Link>

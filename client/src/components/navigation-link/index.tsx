@@ -18,13 +18,12 @@ export const NavigationLink = ({
       title={name}
       onClick={scrollTo}
       className={`nav-link ${
-        name === "Sign Up"
-          ? "bg-cyan-500 hover:bg-cyan-600 text-white rounded-[3rem]"
-          : "text-gray-600"
-      } px-2 py-2 text-xl font-bold transition duration-200 ease-in`}
+        name === "Sign Up" &&
+        "link-button nav-link-sign-btn"
+      } px-2 py-2`}
     >
       {name}
-      {name !== "Sign Up" && <div className="bg-cyan-500"></div>}
+      {name !== "Sign Up" && <div className="bg-primary-cerulean"></div>}
     </Link>
   );
 };

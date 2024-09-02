@@ -33,14 +33,14 @@ function App() {
         servicesRef={servicesRef}
         plansRef={plansRef}
       />
-      <main className="mt-28 p-10 lg:mt-0">
+      <main className="bg-secondary-white mt-28 p-10 lg:mt-0">
         <section
           ref={heroRef}
           className="hero-section md:min-h-screen grid items-center gap-3 lg:grid-cols-[1.5fr_2fr]"
         >
           <div className="flex flex-col gap-3">
             <Heading>
-              Gerenciamento facilitado com <span className="text-cyan-400 underline">ThunderTask</span>
+              Gerenciamento facilitado com <span className="text-primary-cyan underline">ThunderTask</span>
             </Heading>
             <SubHeading>
               Pessoas e Empresas potencializam sua produtividade e eficiência
@@ -56,7 +56,7 @@ function App() {
             />
           </div>
         </section>
-        <div className="w-full h-1 bg-cyan-400 my-5"></div>
+        <div className="w-full h-1 bg-primary-cyan my-5"></div>
         <section
           ref={servicesRef}
           className="services-section min-h-screen flex flex-col justify-center gap-10"
@@ -75,7 +75,7 @@ function App() {
             ))}
           </div>
         </section>
-        <div className="w-full h-1 bg-cyan-400 my-5"></div>
+        <div className="w-full h-1 bg-primary-cyan my-5"></div>
         <section
           ref={plansRef}
           className="plans-section min-h-screen flex flex-col justify-center gap-10"
