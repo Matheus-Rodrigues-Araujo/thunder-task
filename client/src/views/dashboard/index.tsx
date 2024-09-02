@@ -2,6 +2,7 @@ import { FormInput } from "../../components/form-input";
 import WorkSpaceCard from "../../components/workspace-card";
 import DynamicPanel from "../../components/dynamic-panel";
 import DashboardHeader from "../../layouts/dashboard-header";
+import { ContentHeading } from "../../components/content-heading";
 import TopBar from "../../components/top-bar";
 
 const Dashboard = () => {
@@ -12,16 +13,13 @@ const Dashboard = () => {
         <TopBar />
         <div className="grid gap-5">
           <DynamicPanel />
-
-          <div className="px-5 grid gap-3">
-            <div className="flex items-center justify-between">
-              <h3 className="text-black font-bold text-3xl">
-                Suas Áreas de trabalho
-              </h3>
+          <div className="ds-content-container px-5 grid gap-3">
+            <div className="ds-content-header flex items-center justify-between">
+              <ContentHeading>Suas Áreas de trabalho</ContentHeading>
               <FormInput type="text" placeholder="Search workspace" />
             </div>
             <div
-              className="grid grid-cols-[1fr_1fr] my-3 gap-3 max-h-[calc(70vh-45px)] overflow-y-scroll"
+              className="grid grid-cols-3 my-3 gap-3 max-h-[calc(70vh-45px)] overflow-y-scroll"
               style={{ scrollbarWidth: "none" }}
             >
               <WorkSpaceCard

@@ -1,6 +1,6 @@
 import { FaPlus } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 import { TextContent } from "../text-content";
+import Button from "../button";
 
 import "./styles.css";
 
@@ -14,16 +14,10 @@ const DynamicPanel = () => {
         </TextContent>
       </div>
 
-      <div
-        className="
-    w-72 h-12 flex items-center justify-center border bg-white
-  text-black rounded-3xl transition 200 ease-in hover:border-cyan-400
-  hover:bg-black hover:text-cyan-400"
-      >
-        <Link to="tasks" className="flex items-center gap-3">
-          <FaPlus size="1.2rem" /> Nova área de trabalho{" "}
-        </Link>
-      </div>
+      <Button action={() => console.log("Button clicked!")}>
+        <FaPlus size="1.2rem" />
+        Nova área de trabalho
+      </Button>
     </div>
   );
 };
