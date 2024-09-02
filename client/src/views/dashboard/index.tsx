@@ -1,5 +1,7 @@
 import { Brand } from "../../components/brand";
 import { Link } from "react-router-dom";
+import { FormInput } from "../../components/form-input";
+import WorkSpaceCard from "../../components/workspace-card";
 
 import "./styles.css";
 
@@ -12,11 +14,7 @@ import {
   FaUsers,
   FaSignOutAlt,
   FaPlus,
-  FaEye,
-  FaEdit,
-  FaTrash,
 } from "react-icons/fa";
-import { FormInput } from "../../components/form-input";
 
 const Dashboard = () => {
   return (
@@ -136,234 +134,17 @@ const Dashboard = () => {
           </div>
 
           <div className="px-5 grid gap-3">
-            <div className="flex items-center justify-between" >
+            <div className="flex items-center justify-between">
               <h3 className="text-black font-bold text-3xl">
                 Suas Áreas de trabalho
               </h3>
               <FormInput type="text" placeholder="Search workspace" />
             </div>
-            <div className="grid grid-cols-[1fr_1fr] my-3 gap-3 h-[calc(70vh-45px)] overflow-y-scroll">
-              <div className="h-44 gap-3 grid border bg-slate-900 rounded-md">
-                <div className="flex items-center gap-3 p-5">
-                  <h4 className="text-4xl text-cyan-400 font-bold">
-                    Workspace 1
-                  </h4>
-                  <p className="rounded-xl h-7 w-32 text-center px-2 font-bold border border-white text-white">
-                    12 projects
-                  </p>
-                </div>
-                <div className="flex gap-3 justify-evenly text-white border-t p-5">
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaPlus size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEye size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEdit size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaTrash size="1.2rem" />
-                  </button>
-                </div>
-              </div>
-
-              <div className="h-44 gap-3 grid border bg-slate-900 rounded-md">
-                <div className="flex items-center gap-3 p-5">
-                  <h4 className="text-4xl text-cyan-400 font-bold">
-                    Workspace 1
-                  </h4>
-                  <p className="rounded-xl h-7 w-32 text-center px-2 font-bold border border-white text-white">
-                    12 projects
-                  </p>
-                </div>
-                <div className="flex gap-3 justify-evenly text-white border-t p-5">
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaPlus size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEye size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEdit size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaTrash size="1.2rem" />
-                  </button>
-                </div>
-              </div>
-
-              <div className="h-44 gap-3 grid border bg-slate-900 rounded-md">
-                <div className="flex items-center gap-3 p-5">
-                  <h4 className="text-4xl text-cyan-400 font-bold">
-                    Workspace 1
-                  </h4>
-                  <p className="rounded-xl h-7 w-32 text-center px-2 font-bold border border-white text-white">
-                    12 projects
-                  </p>
-                </div>
-                <div className="flex gap-3 justify-evenly text-white border-t p-5">
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaPlus size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEye size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEdit size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaTrash size="1.2rem" />
-                  </button>
-                </div>
-              </div>
-
-              <div className="h-44 gap-3 grid border bg-slate-900 rounded-md">
-                <div className="flex items-center gap-3 p-5">
-                  <h4 className="text-4xl text-cyan-400 font-bold">
-                    Workspace 1
-                  </h4>
-                  <p className="rounded-xl h-7 w-32 text-center px-2 font-bold border border-white text-white">
-                    12 projects
-                  </p>
-                </div>
-                <div className="flex gap-3 justify-evenly text-white border-t p-5">
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaPlus size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEye size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEdit size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaTrash size="1.2rem" />
-                  </button>
-                </div>
-              </div>
-
-              <div className="h-44 gap-3 grid border bg-slate-900 rounded-md">
-                <div className="flex items-center gap-3 p-5">
-                  <h4 className="text-4xl text-cyan-400 font-bold">
-                    Workspace 1
-                  </h4>
-                  <p className="rounded-xl h-7 w-32 text-center px-2 font-bold border border-white text-white">
-                    12 projects
-                  </p>
-                </div>
-                <div className="flex gap-3 justify-evenly text-white border-t p-5">
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaPlus size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEye size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEdit size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaTrash size="1.2rem" />
-                  </button>
-                </div>
-              </div>
-
-              <div className="h-44 gap-3 grid border bg-slate-900 rounded-md">
-                <div className="flex items-center gap-3 p-5">
-                  <h4 className="text-4xl text-cyan-400 font-bold">
-                    Workspace 1
-                  </h4>
-                  <p className="rounded-xl h-7 w-32 text-center px-2 font-bold border border-white text-white">
-                    12 projects
-                  </p>
-                </div>
-                <div className="flex gap-3 justify-evenly text-white border-t p-5">
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaPlus size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEye size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEdit size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaTrash size="1.2rem" />
-                  </button>
-                </div>
-              </div>
-              <div className="h-44 gap-3 grid border bg-slate-900 rounded-md">
-                <div className="flex items-center gap-3 p-5">
-                  <h4 className="text-4xl text-cyan-400 font-bold">
-                    Workspace 1
-                  </h4>
-                  <p className="rounded-xl h-7 w-32 text-center px-2 font-bold border border-white text-white">
-                    12 projects
-                  </p>
-                </div>
-                <div className="flex gap-3 justify-evenly text-white border-t p-5">
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaPlus size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEye size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEdit size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaTrash size="1.2rem" />
-                  </button>
-                </div>
-              </div>
-              <div className="h-44 gap-3 grid border bg-slate-900 rounded-md">
-                <div className="flex items-center gap-3 p-5">
-                  <h4 className="text-4xl text-cyan-400 font-bold">
-                    Workspace 1
-                  </h4>
-                  <p className="rounded-xl h-7 w-32 text-center px-2 font-bold border border-white text-white">
-                    12 projects
-                  </p>
-                </div>
-                <div className="flex gap-3 justify-evenly text-white border-t p-5">
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaPlus size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEye size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEdit size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaTrash size="1.2rem" />
-                  </button>
-                </div>
-              </div>
-              <div className="h-44 gap-3 grid border bg-slate-900 rounded-md">
-                <div className="flex items-center gap-3 p-5">
-                  <h4 className="text-4xl text-cyan-400 font-bold">
-                    Workspace 1
-                  </h4>
-                  <p className="rounded-xl h-7 w-32 text-center px-2 font-bold border border-white text-white">
-                    12 projects
-                  </p>
-                </div>
-                <div className="flex gap-3 justify-evenly text-white border-t p-5">
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaPlus size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEye size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaEdit size="1.2rem" />
-                  </button>
-                  <button className="h-8 flex-1 border rounded-md flex justify-center items-center transition 200 ease-in hover:text-cyan-400 hover:border-cyan-400">
-                    <FaTrash size="1.2rem" />
-                  </button>
-                </div>
-              </div>
+            <div className="grid grid-cols-[1fr_1fr] my-3 gap-3 max-h-[calc(70vh-45px)] overflow-y-scroll" style={{scrollbarWidth: "none"}} >
+              <WorkSpaceCard name="ThunderTask" totalProjects={4} createdAt="01/08/2023" />
+              <WorkSpaceCard name="Homework" totalProjects={2} createdAt="01/08/2023" />
+              <WorkSpaceCard name="AI 2.0" totalProjects={10} createdAt="01/08/2023" />
+              <WorkSpaceCard name="DeliveryIO" totalProjects={7} createdAt="01/08/2023" />
             </div>
           </div>
         </div>
