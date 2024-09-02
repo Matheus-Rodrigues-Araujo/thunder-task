@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./styles.css";
 
 import { Brand } from "../../components/brand";
-import { ContentText } from "../../components/content-text";
+import { TextContent } from "../../components/text-content";
 import { ContentHeading } from "../../components/content-heading";
 
 import {
@@ -17,12 +17,12 @@ export const Footer = () => {
       <div className="footer-wrapper w-[230px] gap-3 flex flex-col flex-wrap md:w-full  md:flex-row md:justify-between md:items-start">
         <div className="flex flex-col items-start text-center gap-3">
           <Brand variant="primary" />
-          <ContentText>
+          <TextContent>
             Junte-se a milhões de pessoas que <br /> organizam trabalho e vida
             pessoal
             <br />
             com o ThunderTask.
-          </ContentText>
+          </TextContent>
         </div>
 
         <div className="flex flex-col gap-3">

@@ -3,7 +3,7 @@ import { FaCheck } from "react-icons/fa6";
 
 import { Plan } from "../../constants/plans";
 import { ContentSubHeading } from "../content-sub-heading";
-import { ContentText } from "../content-text";
+import { TextContent } from "../text-content";
 import { LinkButton } from "../link-button";
 
 export const PlanCard = ({ name, description, price, features }: Plan) => {
@@ -18,7 +18,7 @@ export const PlanCard = ({ name, description, price, features }: Plan) => {
     >
       <ContentSubHeading>{name}</ContentSubHeading>
       <span className="price text-cyan-400 text-4xl font-bold">{price}</span>
-      <ContentText>{description}</ContentText>
+      <TextContent>{description}</TextContent>
       <ul>
         {features.map((feature) => (
           <li

@@ -6,8 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { authFormSchema } from "../../utils/auth-form-schema";
 
 import { SubHeading } from "../sub-heading";
-import { ContentText } from "../content-text";
-import { HeroHeading } from "../hero-heading";
+import { TextContent } from "../text-content";
+import { Heading } from "../heading";
 import { Brand } from "../brand";
 import { FormInput } from "../form-input";
 import { SubmitButton } from "../submit-button";
@@ -27,9 +27,9 @@ export const AuthForm = ({ type }: { type: string }) => {
     <section className="bg-white auth-section flex min-h-screen w-full justify-center items-center">
       <div className="m-5 auth-body grid w-full max-w-md">
         <header className="auth-header flex flex-col">
-          <HeroHeading>
+          <Heading>
             <Brand variant="primary" />
-          </HeroHeading>
+          </Heading>
           <SubHeading>{type === "sign-in" ? "Sign in" : "Sign up"}</SubHeading>
         </header>
         <form onSubmit={onSubmit} className="auth-form mt-2 grid gap-3">
@@ -105,22 +105,22 @@ export const AuthForm = ({ type }: { type: string }) => {
         </div>
         <footer className="auth-footer flex justify-center text-center">
           {type === "sign-in" ? (
-            <ContentText>
+            <TextContent>
               Ainda não tem conta?
               <Link to="/sign-up" className="text-cyan-400 font-bold">
                 {" "}
                 Registrar
               </Link>
-            </ContentText>
+            </TextContent>
           ) : (
-            <ContentText>
+            <TextContent>
               {" "}
               Já possui uma conta?
               <Link to="/sign-in" className="text-cyan-400 font-bold">
                 {" "}
                 Entrar
               </Link>
-            </ContentText>
+            </TextContent>
           )}
         </footer>
       </div>

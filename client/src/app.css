@@ -1,9 +1,11 @@
-.services-section p, .plans-section p {
+.services-section p,
+.plans-section p {
   font-size: 1rem;
   letter-spacing: -0.1px;
 }
 
-.services-section > p, .plans-section > p {
+.services-section > p,
+.plans-section > p {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
@@ -11,13 +13,25 @@
   color: #22d3ee;
 }
 
-.plans-section h4{
+.plans-section h4 {
   color: black;
 }
 
-
 @media screen and (max-width: 728px) {
-  .services-section > p, .plans-section > p {
+  .services-section > p,
+  .plans-section > p {
     line-height: 40px;
+  }
+
+  .heading {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (min-width: 728px) {
+  .hero-section .heading {
+    font-size: 4rem;
+    line-height: 4rem;
   }
 }

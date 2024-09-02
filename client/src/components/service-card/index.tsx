@@ -2,7 +2,7 @@ import "./styles.css";
 
 import { Service } from "../../constants/services";
 import { ContentSubHeading } from "../content-sub-heading";
-import { ContentText } from "../content-text";
+import { TextContent } from "../text-content";
 import { LinkButton } from "../link-button";
 
 export const ServiceCard = ({ name, icon, subtitle, description }: Service) => {
@@ -17,7 +17,7 @@ export const ServiceCard = ({ name, icon, subtitle, description }: Service) => {
       </div>
       <div className="service-wrapper flex bg-white py-5 gap-2 flex-col justify-around items-center">
         <ContentSubHeading>{name}</ContentSubHeading>
-        <ContentText>{subtitle}</ContentText>
+        <TextContent>{subtitle}</TextContent>
         <LinkButton route="#">Saiba mais</LinkButton>
       </div>
       <div className="hidden">{description}</div>

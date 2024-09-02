@@ -1,0 +1,16 @@
+.ws-top .text-content {
+  @apply h-5 w-32 text-sm text-center  text-black bg-white font-bold rounded-full;
+}
+
+.ws-bottom .text-content {
+  @apply flex items-center gap-3 text-white text-sm;
+}
+
+.ws-btn {
+  @apply h-8 flex-1 border rounded-md flex
+  justify-center items-center transition
+  duration-200 ease-in bg-cyan-400 text-white
+hover:bg-cyan-500 hover:border-cyan-400;
+}
+
+

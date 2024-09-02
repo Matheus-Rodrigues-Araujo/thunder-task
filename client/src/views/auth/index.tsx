@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import "./styles.css";
 import { Brand } from "../../components/brand";
-import { ContentText } from "../../components/content-text";
+import { TextContent } from "../../components/text-content";
 
 const Auth = () => {
   return (
@@ -10,7 +10,7 @@ const Auth = () => {
       <div className="auth-bg hidden lg:flex flex-col justify-center items-center">
         <div className="max-w-xl grid place-items-center">
           <Brand variant='secondary' />
-          <ContentText>Domine suas tarefas com o poder do trovão!</ContentText>
+          <TextContent>Domine suas tarefas com o poder do trovão!</TextContent>
         </div>
       </div>
     </main>
