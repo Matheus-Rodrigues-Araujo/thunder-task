@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import { AuthForm } from "../components/auth-form";
 import Auth from "../views/auth";
-import Error from "../components/Error";
+import Error from "../views/error";
 import Dashboard from "../views/dashboard";
 
 const routes = createBrowserRouter([

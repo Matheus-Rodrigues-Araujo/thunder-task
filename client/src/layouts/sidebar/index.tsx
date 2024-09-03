@@ -1,14 +1,14 @@
 import { Brand } from "../../components/brand";
 import { NavigationLink } from "../../components/navigation-link";
 import { Overlay } from "../../components/overlay";
-import { NavigationLinksProps } from "../header/constants";
+import { HeaderItemsProps } from "@/constants/headerConstants";
 
 export interface SidebarProps {
-  navigationLinks: NavigationLinksProps[];
+  items: HeaderItemsProps[];
   isSidebarOpen: boolean;
 }
 
-export const Sidebar = ({ navigationLinks, isSidebarOpen }: SidebarProps) => {
+export const Sidebar = ({ items, isSidebarOpen }: SidebarProps) => {
   return (
     <>
       <div
@@ -20,7 +20,7 @@ export const Sidebar = ({ navigationLinks, isSidebarOpen }: SidebarProps) => {
         <div className="flex flex-col gap-6 mt-5 flex-grow">
           <Brand variant="primary" />
           <ul className="flex flex-col gap-5">
-            {navigationLinks.map((link: NavigationLinksProps) => (
+            {items.map((link: HeaderItemsProps) => (
               <li key={link.name} className="w-28">
                 <NavigationLink
                   key={link.name}

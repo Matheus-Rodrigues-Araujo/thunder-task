@@ -2,7 +2,6 @@ import { FormInput } from "../../components/form-input";
 import WorkSpaceCard from "../../components/workspace-card";
 import DynamicPanel from "../../components/dynamic-panel";
 import DashboardHeader from "../../layouts/dashboard-header";
-import { ContentHeading } from "../../components/content-heading";
 import TopBar from "../../components/top-bar";
 
 const Dashboard = () => {
@@ -15,7 +14,7 @@ const Dashboard = () => {
           <DynamicPanel />
           <div className="ds-content-container px-5 grid gap-3">
             <div className="ds-content-header flex items-center justify-between">
-              <ContentHeading>Suas Áreas de trabalho</ContentHeading>
+              <h3>Suas Áreas de trabalho</h3>
               <FormInput type="text" placeholder="Search workspace" />
             </div>
             <div

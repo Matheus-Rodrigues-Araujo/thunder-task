@@ -4,17 +4,12 @@ import "./App.css";
 import { Footer } from "./layouts/footer";
 import { Header } from "./layouts/header";
 
-// import { Heading } from "./components/heading";
-import { Heading } from "./components/heading";
-import { SubHeading } from "./components/sub-heading";
-import { ContentHeading } from "./components/content-heading";
 import { LinkButton } from "./components/link-button";
 import { ServiceCard } from "./components/service-card";
-import { TextContent } from "./components/text-content";
 import { PlanCard } from "./components/plan-card";
 
-import { services } from "./constants/services";
-import { plans } from "./constants/plans";
+import { SERVICES_ITEMS } from "./constants/servicesConstants";
+import { PLANS_ITEMS } from "./constants/plansConstants";
 
 function App() {
   const heroRef = useRef(null);
@@ -39,14 +34,15 @@ function App() {
           className="hero-section md:min-h-screen grid items-center gap-3 lg:grid-cols-[1.5fr_2fr]"
         >
           <div className="flex flex-col gap-3">
-            <Heading>
-              Gerenciamento facilitado com <span className="text-primary-cyan underline">ThunderTask</span>
-            </Heading>
-            <SubHeading>
+            <h1>
+              Gerenciamento facilitado com{" "}
+              <span className="text-primary-cyan underline">ThunderTask</span>
+            </h1>
+            <h2>
               Pessoas e Empresas potencializam sua produtividade e eficiência
               com nosso software de gerenciamento de tarefas, desde as mais
               simples até as mais complexas.
-            </SubHeading>
+            </h2>
             <LinkButton route="/sign-up">Começar agora</LinkButton>
           </div>
           <div className="max-w-[1200px] max-h-[500px] lg:max-h-[700px]">
@@ -61,10 +57,10 @@ function App() {
           ref={servicesRef}
           className="services-section min-h-screen flex flex-col justify-center gap-10"
         >
-          <ContentHeading>Serviços que entregamos</ContentHeading>
-          <TextContent>Nossos serviços e integrações</TextContent>
+          <h3>Serviços que entregamos</h3>
+          <p>Nossos serviços e integrações</p>
           <div className="flex flex-wrap gap-10 justify-center">
-            {services.map(({ id, name, icon, subtitle, description }) => (
+            {SERVICES_ITEMS.map(({ id, name, icon, subtitle, description }) => (
               <ServiceCard
                 key={id}
                 name={name}
@@ -80,10 +76,10 @@ function App() {
           ref={plansRef}
           className="plans-section min-h-screen flex flex-col justify-center gap-10"
         >
-          <ContentHeading>Nossos planos</ContentHeading>
-          <TextContent>Analise os benefícios</TextContent>
+          <h3>Nossos planos</h3>
+          <p>Analise os benefícios</p>
           <div className="flex flex-wrap gap-10 justify-center">
-            {plans.map(({ id, name, description, features, price }) => (
+            {PLANS_ITEMS.map(({ id, name, description, features, price }) => (
               <PlanCard
                 key={id}
                 name={name}

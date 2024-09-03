@@ -1,9 +1,8 @@
+import { LinkButton } from "../link-button";
+
 import { FaCheck } from "react-icons/fa6";
 
-import { Plan } from "../../constants/plans";
-import { ContentSubHeading } from "../content-sub-heading";
-import { TextContent } from "../text-content";
-import { LinkButton } from "../link-button";
+import { Plan } from "../../constants/plansConstants";
 
 export const PlanCard = ({ name, description, price, features }: Plan) => {
   return (
@@ -11,11 +10,11 @@ export const PlanCard = ({ name, description, price, features }: Plan) => {
       className="
       plan-card card flex-col flex place-content-center gap-3"
     >
-      <ContentSubHeading>{name}</ContentSubHeading>
+      <h4>{name}</h4>
       <span className="price text-primary-cyan text-4xl font-bold">
         {price}
       </span>
-      <TextContent>{description}</TextContent>
+      <p>{description}</p>
       <ul>
         {features.map((feature) => (
           <li

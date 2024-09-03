@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import "./styles.css";
 
 interface ButtonProps {
   children: ReactNode;
@@ -8,7 +7,7 @@ interface ButtonProps {
 
 const Button = ({ children, action }: ButtonProps) => {
   return (
-    <button className="btn" onClick={action}>
+    <button className="center w-80 gap-3" onClick={action}>
       {children}
     </button>
   );

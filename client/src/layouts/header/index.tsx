@@ -10,7 +10,7 @@ import {
 
 import { RiMenuFill } from "react-icons/ri";
 
-import { navigationLinks } from "./constants";
+import { HEADER_ITEMS } from "../../constants/headerConstants";
 
 export interface HeaderProps {
   scrollToRef: (ref: RefObject<Element>) => void;
@@ -92,22 +92,22 @@ export const Header = ({
       <header className="header shadow-[0_-5px_10px_2px_black] h-24 px-10 flex fixed top-0 left-0 w-full z-20 bg-secondary-white">
         <div className="header-wrapper w-full flex justify-between items-center">
           <Brand variant="primary" />
-          <nav data-testid="header-nav" className="hidden lg:flex items-center gap-1 ">
-            {navigationLinks.map((link) => handleScrollNavigation(link))}
+          <nav
+            data-testid="header-nav"
+            className="hidden lg:flex items-center gap-1 "
+          >
+            {HEADER_ITEMS.map((link) => handleScrollNavigation(link))}
           </nav>
           <RiMenuFill
-            className="cursor-pointer transition duration-200 ease-in-out p-1 lg:hidden"
-            color="#06b6d4"
-            size="2.5em"
+            className="cursor-pointer p-1 text-primary-cyan lg:hidden"
+            // color="#06b6d4"
+            style={{ width: "2.5rem", height: "2.5rem" }}
             onClick={handleSidebar}
             data-testid="toggle-sidebar"
           />
         </div>
       </header>
-      <Sidebar
-        navigationLinks={navigationLinks}
-        isSidebarOpen={isSidebarOpen}
-      />
+      <Sidebar items={HEADER_ITEMS} isSidebarOpen={isSidebarOpen} />
     </>
   );
 };

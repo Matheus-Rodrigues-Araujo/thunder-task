@@ -14,11 +14,11 @@ export const Brand = ({ variant = "primary" }: BrandProps) => {
   return (
     <Link
       to="/"
-      className={`brand flex items-center transition duration-200 ease-in text-3xl font-bold ${variantStyles[variant]}`}
+      className={`brand center text-3xl font-bo/ld ${variantStyles[variant]}`}
     >
       Thunder
       <AiFillThunderbolt
-        size="2rem"
+        style={{ width: "2rem", height: "2rem" }}
         className={`transition duration-200 ease-in`}
       />
       Task

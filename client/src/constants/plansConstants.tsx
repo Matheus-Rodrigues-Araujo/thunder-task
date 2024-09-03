@@ -8,7 +8,7 @@ export interface Plan {
   features: string[];
 }
 
-export const plans: Plan[] = [
+export const PLANS_ITEMS: Plan[] = [
   {
     id: 1,
     name: "Plano Básico",

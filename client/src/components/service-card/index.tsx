@@ -1,24 +1,21 @@
-import "./styles.css";
-
-import { Service } from "../../constants/services";
-import { ContentSubHeading } from "../content-sub-heading";
-import { TextContent } from "../text-content";
+import { Service } from "../../constants/servicesConstants";
 import { LinkButton } from "../link-button";
 
-export const ServiceCard = ({ name, icon, subtitle, description }: Service) => {
+export const ServiceCard = (service: Service) => {
   return (
-    <div
-      className="service-card card"
-    >
+    <div className="service-card card">
       <div className="bg-primary-cyan center h-[60%] rounded-t-lg">
-        {icon}
+        <service.icon
+          style={{ width: "6rem", height: "6rem" }}
+          color="#ffffff"
+        />
       </div>
       <div className="service-wrapper flex bg-secondary-white py-5 gap-2 flex-col justify-around items-center">
-        <ContentSubHeading>{name}</ContentSubHeading>
-        <TextContent>{subtitle}</TextContent>
+        <h4 className="text-primary-cyan text-center">{service.name}</h4>
+        <p>{service.subtitle}</p>
         <LinkButton route="#">Saiba mais</LinkButton>
       </div>
-      <div className="hidden">{description}</div>
+      <div className="hidden">{service.description}</div>
     </div>
   );
 };

@@ -1,18 +1,10 @@
 .auth-bg .brand {
-  color: white;
+  @apply text-secondary-white;
   font-size: 4rem;
 }
+
 .auth-bg .brand svg {
   fill: white;
   height: 4rem;
   width: 4rem;
-}
-
-.auth-bg .content-text {
-  color: white;
-  font-weight: 600;
-  font-size: 1.2rem;
-  background-color: white;
-  color: var(--cyan);
-  padding: 2px 5px;
 }

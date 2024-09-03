@@ -64,22 +64,58 @@ export default {
     require("@tailwindcss/typography"),
     function ({ addBase, addComponents, theme }) {
       addBase({
+        h1: {
+          fontSize: theme("fontSize.4xl"),
+          fontWeight: theme("fontWeight.bold"),
+          color: theme("colors.secondary-black"),
+        },
+        h2: {
+          fontSize: theme("fontSize.lg"),
+          fontWeight: theme("fontWeight.medium"),
+          color: theme("colors.secondary-gray"),
+        },
+        h3: {
+          fontSize: theme("fontSize.3xl"),
+          fontWeight: theme("fontWeight.bold"),
+          color: theme("colors.secondary-mediumGray"),
+          textAlign: "center",
+        },
+        h4: {
+          fontSize: theme("fontSize.md"),
+          fontWeight: theme("fontWeight.bold"),
+          color: theme("colors.secondary-white"),
+          textAlign: "left",
+        },
+        p: {
+          fontSize: theme("fontSize.lg"),
+          color: theme("colors.secondary-mediumGray"),
+          textAlign: "justify",
+        },
         a: {
           fontWeight: "bold",
           fontSize: theme("fontSize.xl"),
           color: theme("colors.secondary.mediumGray"),
           transitionProperty: theme("transitionProperty.colors"),
           transitionDuration: theme("transitionDuration.200"),
+          transitionTimingFunction: "ease-in",
         },
         button: {
-          backgroundColor: theme("colors.primary.cyan"),
+          fontSize: theme("fontSize.xl"),
+          height: theme("spacing.10"),
           color: theme("colors.secondary.white"),
+          backgroundColor: theme("colors.primary.cyan"),
           transitionProperty: theme("transitionProperty.colors"),
           transitionDuration: theme("transitionDuration.200"),
+          transitionTimingFunction: "ease-in",
+          borderRadius: theme("borderRadius.3xl"),
           "&:hover": {
             backgroundColor: theme("colors.primary.cerulean"),
             color: theme("colors.secondary.white"),
           },
+        },
+        svg: {
+          height: "1.2rem",
+          width: "1.2rem",
         },
       });
 

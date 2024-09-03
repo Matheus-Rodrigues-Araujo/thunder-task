@@ -5,9 +5,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { authFormSchema } from "../../utils/auth-form-schema";
 
-import { SubHeading } from "../sub-heading";
-import { TextContent } from "../text-content";
-import { Heading } from "../heading";
 import { Brand } from "../brand";
 import { FormInput } from "../form-input";
 import { SubmitButton } from "../submit-button";
@@ -27,10 +24,10 @@ export const AuthForm = ({ type }: { type: string }) => {
     <section className="bg-secondary-white auth-section flex min-h-screen w-full justify-center items-center">
       <div className="m-5 auth-body grid w-full max-w-md">
         <header className="auth-header flex flex-col">
-          <Heading>
+          <h1>
             <Brand variant="primary" />
-          </Heading>
-          <SubHeading>{type === "sign-in" ? "Sign in" : "Sign up"}</SubHeading>
+          </h1>
+          <h2>{type === "sign-in" ? "Sign in" : "Sign up"}</h2>
         </header>
         <form onSubmit={onSubmit} className="auth-form mt-2 grid gap-3">
           {type === "sign-up" && (
@@ -94,8 +91,8 @@ export const AuthForm = ({ type }: { type: string }) => {
             {isLoading
               ? "Loading..."
               : type === "sign-in"
-              ? "Login"
-              : "Cadastrar"}
+                ? "Login"
+                : "Cadastrar"}
           </SubmitButton>
         </form>
         <div className="flex items-center w-full gap-3">
@@ -105,22 +102,22 @@ export const AuthForm = ({ type }: { type: string }) => {
         </div>
         <footer className="auth-footer flex justify-center text-center">
           {type === "sign-in" ? (
-            <TextContent>
+            <p>
               Ainda não tem conta?
               <Link to="/sign-up" className="text-primary-cyan font-bold">
                 {" "}
                 Registrar
               </Link>
-            </TextContent>
+            </p>
           ) : (
-            <TextContent>
+            <p>
               {" "}
               Já possui uma conta?
               <Link to="/sign-in" className="text-primary-cyan font-bold">
                 {" "}
                 Entrar
               </Link>
-            </TextContent>
+            </p>
           )}
         </footer>
       </div>

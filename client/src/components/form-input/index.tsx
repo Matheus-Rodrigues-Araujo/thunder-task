@@ -4,7 +4,6 @@ import {
   UseFormRegisterReturn,
   FieldValues,
 } from "react-hook-form";
-import { TextContent } from "../text-content";
 
 interface FormInputProps {
   label?: string;
@@ -30,7 +29,7 @@ export const FormInput = ({
         {...register}
         className="rounded-md p-2 border"
       />
-      <TextContent>{(error?.message as string) || ""}</TextContent>
+      <p>{(error?.message as string) || ""}</p>
     </div>
   );
 };
