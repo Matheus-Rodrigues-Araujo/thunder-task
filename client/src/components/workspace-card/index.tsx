@@ -20,12 +20,13 @@ const WorkSpaceCard = ({
       <div className="ws-wrapper grid gap-3 items-center p-3">
         <div className="ws-top flex items-center gap-3">
           <h4 className="text-4xl font-bold text-secondary-white">{name}</h4>
-          <p>
-            {/* className="h-7 w-32 text-center px-2 font-bold" */}
-            {totalProjects > 1
-              ? `${totalProjects} projects`
-              : `${totalProjects} project`}
-          </p>
+          <div className="h-7 w-36 center text-primary-cerulean bg-secondary-white font-bold border-2 border-secondary-white rounded-full">
+            <p className="text-center text-sm border-2 border-primary-cyan w-full rounded-full">
+              {totalProjects > 1
+                ? `${totalProjects} projects`
+                : `${totalProjects} project`}
+            </p>
+          </div>
         </div>
         <div className="ws-bottom">
           <p className="flex items-center text-secondary-white gap-3">
@@ -34,7 +35,7 @@ const WorkSpaceCard = ({
           </p>
         </div>
       </div>
-      <div className="bg-secondary-lightGray flex gap-3 justify-evenly  border-t p-3">
+      <div className="bg-secondary-lightGray flex flex-wrap gap-3 justify-evenly p-3">
         <button className="ws-btn">
           <FaPlus size="1.2rem" />
         </button>
