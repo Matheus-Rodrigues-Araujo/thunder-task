@@ -1,8 +1,6 @@
 import { FaEdit } from "react-icons/fa";
 import { FaPlus, FaEye, FaTrash, FaCalendar } from "react-icons/fa6";
 
-import "./styles.css";
-
 interface WorkSpaceCardProps {
   name: string;
   totalProjects: number;
