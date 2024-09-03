@@ -1,30 +1,18 @@
-import { Link } from "react-router-dom";
-
-import { Brand } from "../../components/brand";
-
-import { FaSignOutAlt } from "react-icons/fa";
-
-import { DASHBOARD_LINKS } from "../../constants/dashbardHeaderConstants";
-
 const DashboardHeader = () => {
   return (
-    <header className="flex flex-col  min-h-screen border-r">
-      <div className="h-20 flex items-center justify-center ">
-        <Brand variant="primary" />
-      </div>
-      <div className="flex flex-col justify-between flex-1">
-        <div className="grid gap-5">
-          {DASHBOARD_LINKS.map(({ label, to, title, icon }) => (
-            <Link key={label} to={to} title={title} className="ds-header-link">
-              {icon}
-              {label}
-            </Link>
-          ))}
+    <header className="h-20 flex border-b items-center w-full justify-between px-5">
+      <h1>Painel</h1>
+      <div className="flex items-center justify-center">
+        <div className="flex items-center gap-3">
+          <div
+            className="profile-img h-8 w-8 rounded-full bg-primary-cyan bg-cover bg-center"
+            style={{ backgroundImage: "url('/user.png')" }}
+          />
+          <div className="user-info flex flex-col">
+            <p className="font-bold text-base">André</p>
+            <p className="font-light text-sm">andre@gmail.com</p>
+          </div>
         </div>
-        <Link to="/" title="Log out" className="ds-header-link mb-5">
-          <FaSignOutAlt size="1.2rem" />
-          Log out
-        </Link>
       </div>
     </header>
   );

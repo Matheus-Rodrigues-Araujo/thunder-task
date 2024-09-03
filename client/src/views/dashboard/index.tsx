@@ -1,15 +1,15 @@
 import { FormInput } from "../../components/form-input";
 import WorkSpaceCard from "../../components/workspace-card";
 import DynamicPanel from "../../components/dynamic-panel";
+import DashboardAside from "../../layouts/dashboard-aside";
 import DashboardHeader from "../../layouts/dashboard-header";
-import TopBar from "../../components/top-bar";
 
 const Dashboard = () => {
   return (
     <div className="grid grid-cols-[280px_1fr]">
-      <DashboardHeader />
+      <DashboardAside />
       <main className="min-h-screen ">
-        <TopBar />
+        <DashboardHeader />
         <div className="grid gap-5">
           <DynamicPanel />
           <div className="ds-content-container px-5 grid gap-3">
