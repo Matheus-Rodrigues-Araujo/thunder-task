@@ -1,29 +1,30 @@
+import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
 
 export interface NavigationLinkProps {
-  route: string;
-  name: string;
+  to: string;
+  label: string;
+  icon?: ReactElement;
   scrollTo?: () => void;
 }
 
 export const NavigationLink = ({
-  route,
-  name,
+  to,
+  label,
+  icon,
   scrollTo,
 }: NavigationLinkProps) => {
   return (
     <Link
-      to={route}
-      title={name}
+      to={to}
+      title={label}
       onClick={scrollTo}
-      className={`nav-link ${
-        name === "Sign Up" &&
-        "link-button nav-link-sign-btn"
-      } px-2 py-2`}
+      className={`nav-link ds-header-link ${label === "Sign Up" && "link-button nav-link-sign-btn"}`}
     >
-      {name}
-      {name !== "Sign Up" && <div className="bg-primary-cerulean"></div>}
+      {icon && icon}
+      {label}
+      {label !== "Sign Up" && <div className="bg-primary-cerulean"></div>}
     </Link>
   );
 };

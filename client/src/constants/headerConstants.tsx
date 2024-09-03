@@ -1,27 +1,27 @@
 export interface HeaderItemsProps {
-  name: string;
-  route: string;
+  label: string;
+  to: string;
 }
 
 export const HEADER_ITEMS: HeaderItemsProps[] = [
   {
-    name: "Home",
-    route: "/",
+    label: "Home",
+    to: "/",
   },
   {
-    name: "Services",
-    route: "#services",
+    label: "Services",
+    to: "#services",
   },
   {
-    name: "Plans",
-    route: "#plans",
+    label: "Plans",
+    to: "#plans",
   },
   {
-    name: "Sign In",
-    route: "/sign-in",
+    label: "Sign In",
+    to: "/sign-in",
   },
   {
-    name: "Sign Up",
-    route: "/sign-up",
+    label: "Sign Up",
+    to: "/sign-up",
   },
 ];

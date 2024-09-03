@@ -6,16 +6,18 @@ import DashboardHeader from "../../layouts/dashboard-header";
 
 const Dashboard = () => {
   return (
-    <div className="grid grid-cols-[280px_1fr]">
+    <div className="grid lg:grid-cols-[280px_1fr]">
       <DashboardAside />
       <main className="min-h-screen ">
         <DashboardHeader />
         <div className="grid gap-5">
           <DynamicPanel />
           <div className="ds-content-container px-5 grid gap-3">
-            <div className="ds-content-header flex items-center justify-between">
-              <h3>Suas Áreas de trabalho</h3>
-              <FormInput type="text" placeholder="Search workspace" />
+            <div className="ds-panel-content">
+              <h3 className="text-3xl">Suas Áreas de trabalho</h3>
+              <div className="w-full md:max-w-sm" >
+                <FormInput type="text" placeholder="Search workspace" />
+              </div>
             </div>
             <div
               className="grid lg:grid-cols-2 2xl:grid-cols-3 my-3 gap-3 max-h-[calc(70vh-45px)] overflow-y-scroll"

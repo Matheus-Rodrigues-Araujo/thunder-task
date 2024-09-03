@@ -6,8 +6,7 @@ import {
   NavigationLink,
   NavigationLinkProps,
 } from "../../components/navigation-link";
-
-import { RiMenuFill } from "react-icons/ri";
+import ToggleIcon from "../../components/toggle-icon";
 
 import { HEADER_ITEMS } from "../../constants/headerConstants";
 
@@ -25,6 +24,7 @@ export const Header = ({
   plansRef,
 }: HeaderProps) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   const handleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -37,24 +37,24 @@ export const Header = ({
   };
 
   const handleScrollNavigation = (link: NavigationLinkProps) => {
-    if (!link.name.startsWith("Sign")) {
+    if (!link.label.startsWith("Sign")) {
       return (
         <NavigationLink
-          key={link.name}
-          route={link.route}
-          name={link.name}
+          key={link.label}
+          to={link.to}
+          label={link.label}
           scrollTo={() => {
-            link.name === "Home"
+            link.label === "Home"
               ? scrollToRef(heroRef)
-              : link.name === "Services"
+              : link.label === "Services"
                 ? scrollToRef(servicesRef)
-                : link.name === "Plans" && scrollToRef(plansRef);
+                : link.label === "Plans" && scrollToRef(plansRef);
           }}
         />
       );
     } else {
       return (
-        <NavigationLink key={link.name} route={link.route} name={link.name} />
+        <NavigationLink key={link.label} to={link.to} label={link.label} />
       );
     }
   };
@@ -97,13 +97,7 @@ export const Header = ({
           >
             {HEADER_ITEMS.map((link) => handleScrollNavigation(link))}
           </nav>
-          <RiMenuFill
-            className="cursor-pointer p-1 text-primary-cyan lg:hidden"
-            // color="#06b6d4"
-            style={{ width: "2.5rem", height: "2.5rem" }}
-            onClick={handleSidebar}
-            data-testid="toggle-sidebar"
-          />
+          <ToggleIcon handleSidebar={handleSidebar} />
         </div>
       </header>
       <Sidebar items={HEADER_ITEMS} isSidebarOpen={isSidebarOpen} />
