@@ -1,101 +1,63 @@
-import { RefObject, useEffect, useState } from "react";
 import { Brand } from "../../components/brand";
 import { Sidebar } from "../sidebar";
 
-import {
-  NavigationLink,
-  NavigationLinkProps,
-} from "../../components/navigation-link";
+import { NavigationLink } from "../../components/navigation-link";
 import ToggleIcon from "../../components/toggle-icon";
 
 import { HEADER_ITEMS } from "../../constants/headerConstants";
+import { useSidebar } from "../../hooks/useSidebar";
+import { RefObject } from "react";
 
-export interface HeaderProps {
-  scrollToRef: (ref: RefObject<Element>) => void;
-  heroRef: RefObject<Element>;
-  servicesRef: RefObject<Element>;
-  plansRef: RefObject<Element>;
+interface HeaderProps {
+  scrollTo: (ref: RefObject<HTMLElement>) => void;
+  heroRef: RefObject<HTMLElement>;
+  servicesRef: RefObject<HTMLElement>;
+  plansRef: RefObject<HTMLElement>;
 }
 
 export const Header = ({
-  scrollToRef,
+  scrollTo,
   heroRef,
   servicesRef,
   plansRef,
 }: HeaderProps) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
 
   const handleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleClickOutside = (e: MouseEvent) => {
-    if (!(e.target instanceof Element)) return;
-    if (e.target.closest(".overlay")) {
-      setIsSidebarOpen(false);
+   const handleScroll = (section: string) => {
+    switch (section) {
+      case "home":
+        scrollTo(heroRef);
+        break;
+      case "services":
+        scrollTo(servicesRef);
+        break;
+      case "plans":
+        scrollTo(plansRef);
+        break;
+      default:
+        break;
     }
   };
-
-  const handleScrollNavigation = (link: NavigationLinkProps) => {
-    if (!link.label.startsWith("Sign")) {
-      return (
-        <NavigationLink
-          key={link.label}
-          to={link.to}
-          label={link.label}
-          scrollTo={() => {
-            link.label === "Home"
-              ? scrollToRef(heroRef)
-              : link.label === "Services"
-                ? scrollToRef(servicesRef)
-                : link.label === "Plans" && scrollToRef(plansRef);
-          }}
-        />
-      );
-    } else {
-      return (
-        <NavigationLink key={link.label} to={link.to} label={link.label} />
-      );
-    }
-  };
-
-  useEffect(() => {
-    const bodyStyle = document.body.style;
-    isSidebarOpen
-      ? (bodyStyle.overflowY = "hidden")
-      : (bodyStyle.overflowY = "auto");
-
-    return () => {
-      bodyStyle.overflowY = "auto";
-    };
-  }, [isSidebarOpen]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      if (isSidebarOpen && width >= 1024) {
-        setIsSidebarOpen(false);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [isSidebarOpen]);
-
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
-  }, []);
 
   return (
     <>
       <header className="header shadow-[0_-5px_10px_2px_black] h-24 px-10 flex fixed top-0 left-0 w-full z-20 bg-secondary-white">
         <div className="header-wrapper w-full flex justify-between items-center">
           <Brand variant="primary" />
-          <nav
-            data-testid="header-nav"
-            className="hidden lg:flex items-center gap-1 "
-          >
-            {HEADER_ITEMS.map((link) => handleScrollNavigation(link))}
+          <nav data-testid="header-nav" className="header-nav">
+            {HEADER_ITEMS.map(({ label, to }) => (
+              <NavigationLink
+                key={label}
+                to={to}
+
+                scrollTo={() => handleScroll(label.toLowerCase())}
+                label={label}
+              />
+            ))}
           </nav>
           <ToggleIcon handleSidebar={handleSidebar} />
         </div>

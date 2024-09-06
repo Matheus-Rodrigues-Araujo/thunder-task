@@ -14,7 +14,7 @@ export const Brand = ({ variant = "primary" }: BrandProps) => {
   return (
     <Link
       to="/"
-      className={`brand flex items-center text-3xl font-bo/ld ${variantStyles[variant]}`}
+      className={`brand flex items-center text-3xl font-bold ${variantStyles[variant]}`}
     >
       Thunder
       <AiFillThunderbolt
