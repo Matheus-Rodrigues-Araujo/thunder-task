@@ -1,5 +1,5 @@
-import { RefObject, useRef } from "react";
 import "./App.css";
+import { useScrollTo } from "./hooks/useScrollTo";
 
 import { Footer } from "./layouts/footer";
 import { Header } from "./layouts/header";
@@ -12,24 +12,19 @@ import { SERVICES_ITEMS } from "./constants/servicesConstants";
 import { PLANS_ITEMS } from "./constants/plansConstants";
 
 function App() {
-  const heroRef = useRef(null);
-  const servicesRef = useRef(null);
-  const plansRef = useRef(null);
-
-  const scrollToRef = (ref: RefObject<Element>) => {
-    ref.current && ref.current.scrollIntoView({ behavior: "smooth" });
-  };
+  const { heroRef, servicesRef, plansRef, scrollTo } = useScrollTo();
 
   return (
     <>
       <Header
-        scrollToRef={scrollToRef}
+        scrollTo={scrollTo}
         heroRef={heroRef}
         servicesRef={servicesRef}
         plansRef={plansRef}
       />
       <main className="bg-secondary-white mt-28 p-10 lg:mt-0">
         <section
+          id="hero"
           ref={heroRef}
           className="hero-section md:min-h-screen grid items-center gap-3 lg:grid-cols-[1.5fr_2fr]"
         >
@@ -54,6 +49,7 @@ function App() {
         </section>
         <div className="w-full h-1 bg-primary-cyan my-5"></div>
         <section
+          id="services"
           ref={servicesRef}
           className="services-section min-h-screen flex flex-col justify-center gap-10"
         >
@@ -73,6 +69,7 @@ function App() {
         </section>
         <div className="w-full h-1 bg-primary-cyan my-5"></div>
         <section
+          id="plans"
           ref={plansRef}
           className="plans-section min-h-screen flex flex-col justify-center gap-10"
         >
