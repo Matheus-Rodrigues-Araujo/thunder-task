@@ -24,7 +24,7 @@ export const Header = ({ handleScroll }: HeaderProps) => {
           <div className="header-wrapper w-full flex justify-between items-center">
             <Brand variant="primary" />
             <nav data-testid="header-nav" className="header-nav">
-              {HEADER_ITEMS.map(({ label, to }) => (
+              {HEADER_ITEMS.map(({ to, label }) => (
                 <Link
                   key={label}
                   to={to}
@@ -37,7 +37,11 @@ export const Header = ({ handleScroll }: HeaderProps) => {
             <ToggleIcon handleSidebar={handleSidebar} />
           </div>
         </header>
-        <Sidebar items={HEADER_ITEMS} isSidebarOpen={isSidebarOpen} />
+        <Sidebar
+          items={HEADER_ITEMS}
+          isSidebarOpen={isSidebarOpen}
+          handleScroll={handleScroll}
+        />
       </>
     );
   }

@@ -1,7 +1,6 @@
 import ToggleIcon from "../../components/toggle-icon";
 import { useSidebar } from "../../hooks/useSidebar";
-import { Sidebar } from "../../layouts/sidebar";
-import { DASHBOARD_LINKS } from "../../constants/dashbardHeaderConstants";
+// import { DASHBOARD_LINKS } from "../../constants/dashbardHeaderConstants";
 
 const DashboardHeader = () => {
   const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
@@ -28,11 +27,6 @@ const DashboardHeader = () => {
           </div>
         </div>
       </header>
-      <Sidebar
-        type="dashboard"
-        isSidebarOpen={isSidebarOpen}
-        items={DASHBOARD_LINKS}
-      />
     </>
   );
 };

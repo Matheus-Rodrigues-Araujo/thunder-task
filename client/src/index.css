@@ -22,6 +22,10 @@ body {
 }
 
 @layer utilities {
+  .active {
+    @apply bg-primary-cyan text-secondary-white;
+  }
+
   .center {
     @apply flex justify-center items-center;
   }
@@ -31,15 +35,19 @@ body {
   }
 
   .nav-link {
-    @apply flex items-center p-1 gap-3;
+    @apply flex items-center p-1;
   }
 
-  .nav-link-sign-btn {
-    @apply w-28 h-10;
+  .header-nav .nav-link:last-child {
+    @apply bg-primary-cyan h-10 rounded-3xl text-secondary-white;
+  }
+
+  .header-nav {
+    @apply hidden lg:flex items-center gap-3;
   }
 
   .sidebar {
-    @apply flex flex-col w-[280px] border-r fixed top-0 left-0 items-center min-h-screen z-20 pt-2 bg-secondary-white;
+    @apply flex flex-col w-[280px] border-r fixed top-0 left-0 items-center min-h-screen z-20  bg-secondary-white lg:hidden;
   }
 
   .sidebar-toggle-icon {
@@ -48,10 +56,6 @@ body {
 
   .footer-link {
     @apply text-base text-secondary-mediumGray;
-  }
-
-  .ds-header-link {
-    @apply flex gap-3 items-center hover:text-primary-cyan p-2;
   }
 
   .ds-panel-content {

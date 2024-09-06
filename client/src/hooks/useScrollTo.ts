@@ -9,5 +9,21 @@ export const useScrollTo = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  return { heroRef, servicesRef, plansRef, scrollTo };
+  const handleScroll = (section: string) => {
+    switch (section.toLowerCase()) {
+      case "home":
+        scrollTo(heroRef);
+        break;
+      case "services":
+        scrollTo(servicesRef);
+        break;
+      case "plans":
+        scrollTo(plansRef);
+        break;
+      default:
+        break;
+    }
+  };
+
+  return { heroRef, servicesRef, plansRef, scrollTo, handleScroll };
 };

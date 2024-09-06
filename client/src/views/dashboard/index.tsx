@@ -1,13 +1,13 @@
 import { FormInput } from "../../components/form-input";
 import WorkSpaceCard from "../../components/workspace-card";
 import DynamicPanel from "../../components/dynamic-panel";
-import DashboardAside from "../../layouts/dashboard-aside";
+import DashboardSidebar from "../../layouts/dashboard-sidebar";
 import DashboardHeader from "../../layouts/dashboard-header";
 
 const Dashboard = () => {
   return (
     <div className="grid lg:grid-cols-[280px_1fr]">
-      <DashboardAside />
+      <DashboardSidebar />
       <main className="min-h-screen ">
         <DashboardHeader />
         <div className="grid gap-5">
@@ -20,7 +20,7 @@ const Dashboard = () => {
               </div>
             </div>
             <div
-              className="grid lg:grid-cols-2 2xl:grid-cols-3 my-3 gap-3 max-h-[calc(70vh-45px)] overflow-y-scroll"
+              className="grid lg:grid-cols-2 2xl:grid-cols-3 my-3 gap-3 max-h-[calc(70vh-100px)] overflow-y-scroll"
               style={{ scrollbarWidth: "none" }}
             >
               <WorkSpaceCard
@@ -43,6 +43,7 @@ const Dashboard = () => {
                 totalProjects={7}
                 createdAt="01/08/2023"
               />
+              
             </div>
           </div>
         </div>
