@@ -12,16 +12,11 @@ import { SERVICES_ITEMS } from "./constants/servicesConstants";
 import { PLANS_ITEMS } from "./constants/plansConstants";
 
 function App() {
-  const { heroRef, servicesRef, plansRef, scrollTo } = useScrollTo();
+  const { heroRef, servicesRef, plansRef, handleScroll } = useScrollTo();
 
   return (
     <>
-      <Header
-        scrollTo={scrollTo}
-        heroRef={heroRef}
-        servicesRef={servicesRef}
-        plansRef={plansRef}
-      />
+      <Header handleScroll={handleScroll} />
       <main className="bg-secondary-white mt-28 p-10 lg:mt-0">
         <section
           id="hero"
