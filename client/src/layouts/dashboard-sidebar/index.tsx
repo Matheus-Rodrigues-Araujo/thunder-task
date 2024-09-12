@@ -25,7 +25,7 @@ const DashboardSidebar = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
                 to={to}
                 title={label}
                 className={({ isActive }) =>
-                  `nav-link gap-1 ${isActive ? "active" : ""}`
+                  `nav-link gap-1 ${isActive ? "active" : "hover:bg-primary-cyan hover:text-secondary-white"}`
                 }
               >
                 {icon}
@@ -33,7 +33,7 @@ const DashboardSidebar = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
               </NavLink>
             ))}
           </div>
-          <NavLink to="/" title="Log out" className="nav-link ">
+          <NavLink to="/" title="Log out" className="nav-link mb-2">
             <FaSignOutAlt />
             Log out
           </NavLink>

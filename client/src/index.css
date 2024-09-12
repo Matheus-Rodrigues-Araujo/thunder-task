@@ -31,7 +31,7 @@ body {
 
 @layer utilities {
   .active {
-    @apply bg-primary-cyan text-secondary-white;
+    @apply bg-primary-cerulean text-secondary-white;
   }
 
   .center {

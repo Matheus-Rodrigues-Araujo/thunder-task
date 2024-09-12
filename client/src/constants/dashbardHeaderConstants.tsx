@@ -21,11 +21,6 @@ export const DASHBOARD_LINKS: DashboardLinksProps[] = [
     label: "Painel",
   },
   {
-    to: "/dashboard/tasks",
-    icon: <FaTasks />,
-    label: "Tarefas",
-  },
-  {
     to: "/dashboard/projects",
     icon: <FaProjectDiagram />,
     label: "Projetos",
@@ -33,7 +28,12 @@ export const DASHBOARD_LINKS: DashboardLinksProps[] = [
   {
     to: "/dashboard/teams",
     icon: <FaUsers />,
-    label: "Times",
+    label: "Membros",
+  },
+  {
+    to: "/dashboard/calendar",
+    icon: <FaTasks />,
+    label: "Calendário",
   },
   {
     to: "/dashboard/profile",

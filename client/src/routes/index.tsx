@@ -30,16 +30,16 @@ const routes = createBrowserRouter([
     element: <Dashboard />,
     children: [
       {
-        path: "tasks",
-        element: <h1 className="text-black 4xl">Tasks</h1>,
-      },
-      {
         path: "projects",
         element: <h1 className="text-black 4xl">Projects</h1>,
       },
       {
         path: "teams",
         element: <h1 className="text-black 4xl">Teams</h1>,
+      },
+      {
+        path: "calendar",
+        element: <h1 className="text-black 4xl">Calendar</h1>,
       },
       {
         path: "profile",
