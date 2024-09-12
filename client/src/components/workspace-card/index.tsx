@@ -13,8 +13,7 @@ const WorkSpaceCard = ({
   createdAt,
 }: WorkSpaceCardProps) => {
   return (
-    <div className="workspace-card grid h-42 gap-3 bg-primary-gradient border rounded-md">
-      {/* linear-gradient(359deg, #0081c0, var(--cyan)) */}
+    <div className="workspace-card grid h-64 gap-3 bg-primary-gradient border rounded-md">
       <div className="ws-wrapper grid gap-3 items-center p-3">
         <div className="ws-top flex items-center gap-3">
           <h4 className="text-4xl font-bold text-secondary-white">{name}</h4>
@@ -33,7 +32,7 @@ const WorkSpaceCard = ({
           </p>
         </div>
       </div>
-      <div className="bg-secondary-lightGray flex flex-wrap gap-3 justify-evenly p-3">
+      <div className="bg-primary-darkTeal flex items-center flex-wrap gap-3 justify-evenly p-3">
         <button className="ws-btn">
           <FaPlus size="1.2rem" />
         </button>

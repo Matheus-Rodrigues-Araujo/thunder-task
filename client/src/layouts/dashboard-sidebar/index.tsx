@@ -25,7 +25,7 @@ const DashboardSidebar = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
                 to={to}
                 title={label}
                 className={({ isActive }) =>
-                  `nav-link gap-1 ${isActive ? "active" : "hover:bg-primary-cyan hover:text-secondary-white"}`
+                  `nav-link gap-1 ${isActive ? "active" : "hover:bg-primary-aqua hover:text-secondary-white"}`
                 }
               >
                 {icon}

@@ -71,7 +71,7 @@ body {
   }
 
   .ws-btn {
-    @apply h-8 flex-1 border rounded-md flex
+    @apply h-10 flex-1 border rounded-md flex
     justify-center items-center transition
     duration-200 ease-in bg-primary-cyan text-secondary-white
   hover:bg-primary-cerulean hover:border-primary-cyan;
