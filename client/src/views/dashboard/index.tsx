@@ -3,13 +3,16 @@ import WorkSpaceCard from "../../components/workspace-card";
 import DynamicPanel from "../../components/dynamic-panel";
 import DashboardSidebar from "../../layouts/dashboard-sidebar";
 import DashboardHeader from "../../layouts/dashboard-header";
+import { useSidebar } from "../../hooks/useSidebar";
 
 const Dashboard = () => {
+  const { isSidebarOpen, handleSidebar } = useSidebar()
+
   return (
-    <div className="grid lg:grid-cols-[280px_1fr]">
-      <DashboardSidebar />
-      <main className="min-h-screen ">
-        <DashboardHeader />
+    <div className="grid lg:grid-cols-[auto_1fr]">
+      <DashboardSidebar isSidebarOpen={isSidebarOpen} />
+      <main className="min-h-screen relative">
+        <DashboardHeader handleSidebar={handleSidebar} />
         <div className="grid gap-5">
           <DynamicPanel />
           <div className="ds-content-container px-5 grid gap-3">

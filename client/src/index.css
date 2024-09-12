@@ -21,6 +21,14 @@ body {
   font-family: "Source Code Pro", monospace;
 }
 
+.open {
+  transform: translateX(0);
+}
+
+.close {
+  transform: translateX(-100%);
+}
+
 @layer utilities {
   .active {
     @apply bg-primary-cyan text-secondary-white;
@@ -35,7 +43,7 @@ body {
   }
 
   .nav-link {
-    @apply flex items-center p-1;
+    @apply flex items-center p-3;
   }
 
   .header-nav .nav-link:last-child {
@@ -46,12 +54,12 @@ body {
     @apply hidden lg:flex items-center gap-3;
   }
 
-  .sidebar {
-    @apply flex flex-col w-[280px] border-r fixed top-0 left-0 items-center min-h-screen z-20  bg-secondary-white lg:hidden;
-  }
-
   .sidebar-toggle-icon {
     @apply cursor-pointer fill-primary-cyan hover:fill-primary-cerulean;
+  }
+
+  .sidebar {
+    @apply flex flex-col fixed top-0 left-0 duration z-20 min-h-screen border-r w-[280px] bg-secondary-white;
   }
 
   .footer-link {

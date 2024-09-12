@@ -5,7 +5,7 @@ import "./styles.css";
 
 const DynamicPanel = () => {
   return (
-    <div className="ds-panel h-44 w-full bg-secondary-gradient grid md:grid-cols-2 items-center p-5">
+    <div className="ds-panel h-44 w-full bg-primary-cerulean grid md:grid-cols-2 items-center p-5">
       <div className="flex flex-col justify-center">
         <h2 className="text-3xl lg:text-4xl text-secondary-white font-bold">
           Bem vindo, André!

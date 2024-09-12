@@ -1,13 +1,6 @@
 import ToggleIcon from "../../components/toggle-icon";
-import { useSidebar } from "../../hooks/useSidebar";
-// import { DASHBOARD_LINKS } from "../../constants/dashbardHeaderConstants";
 
-const DashboardHeader = () => {
-  const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
-
-  const handleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+const DashboardHeader = ({handleSidebar}: {handleSidebar: () => void}) => {
 
   return (
     <>

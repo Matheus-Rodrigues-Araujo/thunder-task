@@ -16,12 +16,12 @@ export const Brand = ({ variant = "primary" }: BrandProps) => {
       to="/"
       className={`brand flex items-center text-3xl font-bold ${variantStyles[variant]}`}
     >
-      Thunder
+      <span>Thunder</span>
       <AiFillThunderbolt
         style={{ width: "2rem", height: "2rem" }}
-        className={`transition duration-200 ease-in`}
+        className={`cursor-pointer transition duration-200 ease-in`}
       />
-      Task
+      <span>Task</span>
     </Link>
   );
 };

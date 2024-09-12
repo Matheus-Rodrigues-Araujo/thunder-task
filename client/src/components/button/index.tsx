@@ -7,7 +7,7 @@ interface ButtonProps {
 
 const Button = ({ children, action }: ButtonProps) => {
   return (
-    <button className="center max-w-80 text-base bg-secondary-white text-primary-cerulean font-bold px-3 gap-3" onClick={action}>
+    <button className="center max-w-80 text-base bg-secondary-white text-primary-cerulean font-bold px-3 gap-3 hover:bg-none" onClick={action}>
       {children}
     </button>
   );

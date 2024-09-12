@@ -21,7 +21,7 @@ export const Sidebar = ({
     <>
       <div
         data-testid="sidebar"
-        className={`sidebar duration lg:hidden ${!isSidebarOpen ? "-translate-x-full" : "translate-x-0"}`}
+        className={`sidebar items-center ${isSidebarOpen ? "open" : "close"} lg:hidden`}
       >
         <div className="flex flex-col gap-6 mt-5 flex-grow">
           <Brand variant="primary" />

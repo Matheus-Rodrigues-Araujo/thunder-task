@@ -98,6 +98,7 @@ export default {
           transitionProperty: theme("transitionProperty.colors"),
           transitionDuration: theme("transitionDuration.200"),
           transitionTimingFunction: "ease-in",
+          cursor: "pointer",
         },
         button: {
           fontSize: theme("fontSize.xl"),
@@ -108,10 +109,6 @@ export default {
           transitionDuration: theme("transitionDuration.200"),
           transitionTimingFunction: "ease-in",
           borderRadius: theme("borderRadius.3xl"),
-          "&:hover": {
-            backgroundColor: theme("colors.primary.cerulean"),
-            color: theme("colors.secondary.white"),
-          },
         },
         svg: {
           height: "1.2rem",

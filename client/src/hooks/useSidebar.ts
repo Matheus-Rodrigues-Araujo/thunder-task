@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 export const useSidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const handleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   useEffect(() => {
     const bodyStyle = document.body.style;
     isSidebarOpen
@@ -37,5 +41,5 @@ export const useSidebar = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  return { isSidebarOpen, setIsSidebarOpen };
+  return { isSidebarOpen, setIsSidebarOpen, handleSidebar };
 };

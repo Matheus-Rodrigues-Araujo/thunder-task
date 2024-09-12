@@ -12,11 +12,7 @@ interface HeaderProps {
 
 export const Header = ({ handleScroll }: HeaderProps) => {
   {
-    const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
-
-    const handleSidebar = () => {
-      setIsSidebarOpen(!isSidebarOpen);
-    };
+    const { isSidebarOpen, handleSidebar } = useSidebar();
 
     return (
       <>
@@ -28,6 +24,11 @@ export const Header = ({ handleScroll }: HeaderProps) => {
                 <Link
                   key={label}
                   to={to}
+                  className={
+                    label.toLowerCase() === "sign up"
+                      ? "bg-primary-cyan rounded-3xl p-2 text-secondary-white hover:bg-primary-cerulean"
+                      : "hover:text-primary-cyan"
+                  }
                   onClick={() => handleScroll(label.toLowerCase())}
                 >
                   {label}
